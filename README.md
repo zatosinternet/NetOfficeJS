@@ -111,3 +111,16 @@ Exemplo de resultado:
 
 * **reloadTicket** - Recebe dados de um ticket
 
+
+
+
+* **MenuToggle** - Recolhe o menu lateral
+```javascript
+netoffice.MenuToggle() 
+.then(function(v) {
+      console.log(v);    
+}) 
+.catch(function(v) {
+
+});
+```
