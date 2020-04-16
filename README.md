@@ -104,10 +104,6 @@ netoffice.getTicket(<ID_TICKET>)
 
 });
 ```
-Exemplo de resultado:
-```
-
-```
 
 * **reloadTicket** - Atualiza ModalView do ticket que está sendo exibido
 ```javascript
