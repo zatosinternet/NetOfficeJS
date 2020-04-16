@@ -55,9 +55,43 @@ netoffice.NetOfficeRequest(data)
 ```
 
 * Campos adicionais
-* **CAgetData** - Recebe dados de um ticket
+* **CAgetData** - Recebe valor de um capo adicional
+```javascript
+data = {
+			item: "os", //Ex.: os
+			item_id: 0, // ID do item 
+			ca_id: 0, // ID do campo adicional
+			secao: "", // Se for relacionado a seções ('builder','projeto','...')
+			secao_id: 0
+		}
+ netoffice.CAgetData(data) 
+.then(function(v) {
+    console.log(v);    
+}) 
+.catch(function(v) {
 
-* **CAsaveData** - Recebe dados de um ticket
+});
+```
+
+* **CAsaveData** - Insere dados de um campo adicional
+```javascript
+data = {
+			item: "os", //Ex.: os
+			item_id: 0, // ID do item 
+			ca_id: 0, // ID do campo adicional
+			secao: "", // Se for relacionado a seções ('builder','projeto','...')
+			secao_id: 0,
+            valor: "FOO"
+		}
+ netoffice.CAsaveData(data) 
+.then(function(v) {
+    console.log(v);    
+}) 
+.catch(function(v) {
+
+});
+```
+
 
 * Tickets
 * **getTicket** - Recebe dados de um ticket
