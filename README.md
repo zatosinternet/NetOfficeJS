@@ -23,7 +23,9 @@ netoffice.getUser()
 
 * **getData** - Recebe dados de **clientes**
 ```javascript
-netoffice.getData('<item>',<id_item>) 
+var item = 'clientes'; //ex.
+var id_item = 999;
+netoffice.getData(item,id_item) 
 .then(function(v) {
       console.log(v);    
 }) 
