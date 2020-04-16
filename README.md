@@ -109,8 +109,16 @@ Exemplo de resultado:
 
 ```
 
-* **reloadTicket** - Recebe dados de um ticket
+* **reloadTicket** - Atualiza ModalView do ticket que está sendo exibido
+```javascript
+netoffice.reloadTicket() 
+.then(function(v) {
+      console.log(v);    
+}) 
+.catch(function(v) {
 
+});
+```
 
 
 
