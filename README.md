@@ -107,6 +107,40 @@ netoffice.getTicket(<ID_TICKET>)
 });
 ```
 
+
+* **transferTicket** - Transfere a responsabilidade de um ticket
+```javascript
+data = {
+	id: "9999", //ID do ticket
+	operador: "usuario@empresa.com.br", // login do novo responsável
+	comentario: "Ticket transferido" // Comentário (opcional)
+	}
+netoffice.transferTicket(data) 
+.then(function(v) {
+      console.log(v);    
+}) 
+.catch(function(v) {
+
+});
+```
+
+* **findTicket** - Busca Tickets
+```javascript
+data = {
+	relacao_id: "",
+	ref_abertura: "",
+	canal_abertura: "",
+	canal_abertura_id: ""
+};
+netoffice.findTicket(data) 
+.then(function(v) {
+      console.log(v);    
+}) 
+.catch(function(v) {
+
+});
+```
+
 * **reloadTicket** - Atualiza ModalView do ticket que está sendo exibido
 ```javascript
 netoffice.reloadTicket() 
