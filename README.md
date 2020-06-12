@@ -7,6 +7,7 @@
 ### Recebendo dados de usuários
 
 
+### Usuários
 * **getUser** - Recebe dados do usuário logado
 
 ```javascript
@@ -20,7 +21,7 @@ netoffice.getUser()
 
 ```
 
-
+### Clientes
 * **getData** - Recebe dados de **clientes**
 ```javascript
 var item = 'clientes'; //ex.
@@ -56,7 +57,7 @@ netoffice.NetOfficeRequest(data)
 });
 ```
 
-* Campos adicionais
+### Campos adicionais
 * **CAgetData** - Recebe valor de um capo adicional
 ```javascript
 data = {
@@ -95,7 +96,7 @@ data = {
 ```
 
 
-* Tickets
+### Tickets
 * **getTicket** - Recebe dados de um ticket
 ```javascript
 netoffice.getTicket(<ID_TICKET>) 
@@ -142,7 +143,7 @@ netoffice.findTicket(data)
 ```
 
 
-*Builder
+### Builder
 
 * **getSecaoData** - Recebe dados de seção do **NetOffice Builder**
 ```javascript
@@ -157,8 +158,7 @@ netoffice.getSecaoData(no_builder_secao_id)
 ```
 
 
-
-##Interface
+## Interface
 
 
 * **reloadTicket** - Atualiza ModalView do ticket que está sendo exibido
