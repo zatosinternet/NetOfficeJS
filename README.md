@@ -74,26 +74,26 @@ data = {
 * **addTicket** - Cria um ticket
 ```javascript
 data = {
-	usuario: "",
+	usuario: "", //Usuário NetOffice
 	operador: "backlog",
 	assunto: "",
 	descricao: "",
 	ref_abertura: "",
-	tags: "",
+	tags: "Tag 1, Tag 2",
 	emails_os: "",
-	categoria: "",
-	relacao_id: "",
-	seguidores: "",
-	data_desejada: "",
-	cliente_id: "",
-	template: "",
-	seq_responsaveis: "",
-	checklist: "",
-	campos_adicionais: "",
+	categoria: "0",//ID Categoria
+	relacao_id: "",//ID Grupo de Trabalho
+	seguidores: "user1@empresa.com.br,user2@empresa.com.br",
+	data_desejada: "",//AAAA-MM-DD HH:ii:ss
+	cliente_id: "",//ID do cliente
+	template: "", //ID do template
+	seq_responsaveis: "user1@empresa.com.br,user2@empresa.com.br",
+	checklist: "Task 1,Task 2",
+	campos_adicionais: {},
 	canal_abertura: "",
 	canal_abertura_id: "",
-	esforco: "",
-	tipo: ""
+	esforco: "01" //Quantidade de horas
+	
 }
 netoffice.addTicket(data) 
 .then(function(v) {
