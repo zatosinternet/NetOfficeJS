@@ -141,6 +141,26 @@ netoffice.findTicket(data)
 });
 ```
 
+
+*Builder
+
+* **getSecaoData** - Recebe dados de seção do **NetOffice Builder**
+```javascript
+var no_builder_secao_id = 0; //Opcional, esta variável já é definida na view da seção
+netoffice.getSecaoData(no_builder_secao_id) 
+.then(function(v) {
+      console.log(v);    
+}) 
+.catch(function(v) {
+
+});
+```
+
+
+
+##Interface
+
+
 * **reloadTicket** - Atualiza ModalView do ticket que está sendo exibido
 ```javascript
 netoffice.reloadTicket() 
@@ -167,15 +187,4 @@ netoffice.MenuToggle()
 
 
 
-* **getSecaoData** - Recebe dados de seção do **NetOffice Builder**
-```javascript
-var no_builder_secao_id = 0; //Opcional, esta variável já é definida na view da seção
-netoffice.getSecaoData(no_builder_secao_id) 
-.then(function(v) {
-      console.log(v);    
-}) 
-.catch(function(v) {
-
-});
-```
 
