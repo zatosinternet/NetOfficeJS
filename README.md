@@ -69,6 +69,42 @@ data = {
 
 
 ### Tickets
+
+
+* **addTicket** - Cria um ticket
+```javascript
+data = {
+	usuario: "",
+	operador: "backlog",
+	assunto: "",
+	descricao: "",
+	ref_abertura: "",
+	tags: "",
+	emails_os: "",
+	categoria: "",
+	relacao_id: "",
+	seguidores: "",
+	data_desejada: "",
+	cliente_id: "",
+	template: "",
+	seq_responsaveis: "",
+	checklist: "",
+	campos_adicionais: "",
+	canal_abertura: "",
+	canal_abertura_id: "",
+	esforco: "",
+	tipo: ""
+}
+netoffice.addTicket(data) 
+.then(function(v) {
+      console.log(v);    
+}) 
+.catch(function(v) {
+
+});
+```
+
+
 * **getTicket** - Recebe dados de um ticket
 ```javascript
 netoffice.getTicket(<ID_TICKET>) 
@@ -117,12 +153,50 @@ netoffice.findTicket(data)
 
 ### Builder
 
+* **getSecao** - Recebe estrutura de uma seção do **NetOffice Builder**
+```javascript
+var no_builder_secao_id = 0; //Opcional, esta variável já é definida na view da seção
+netoffice.getSecao(no_builder_secao_id) 
+.then(function(v) {
+      console.log(v);    
+}) 
+.catch(function(v) {
+
+});
+```
+
 * **getSecaoData** - Recebe dados de seção do **NetOffice Builder**
 ```javascript
 var no_builder_secao_id = 0; //Opcional, esta variável já é definida na view da seção
 netoffice.getSecaoData(no_builder_secao_id) 
 .then(function(v) {
       console.log(v);    
+}) 
+.catch(function(v) {
+
+});
+```
+
+#### Builder UI
+
+* **getSecaoHTML** - Recebe estrutura HTML do **NetOffice Builder**
+```javascript
+var no_builder_secao_id = 0; 
+netoffice.getSecaoHTML(no_builder_secao_id) 
+.then(function(v) {
+      //Retorno HTML - v.html   
+}) 
+.catch(function(v) {
+
+});
+```
+
+* **getSecaoAnexos** - Recebe estrutura HTML de anexos
+```javascript
+var no_builder_secao_id = 0; 
+netoffice.getSecaoHTML(no_builder_secao_id) 
+.then(function(v) {
+      //Retorno HTML - v.html   
 }) 
 .catch(function(v) {
 
