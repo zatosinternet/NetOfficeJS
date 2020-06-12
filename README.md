@@ -4,8 +4,6 @@
 
 ### `netoffice = new NetOffice();`
 
-### Recebendo dados de usuários
-
 
 * **NetOfficeRequest** - Método para chamadas HTTP
 ```javascript
