@@ -7,35 +7,6 @@
 ### Recebendo dados de usuários
 
 
-### Usuários
-* **getUser** - Recebe dados do usuário logado
-
-```javascript
-netoffice.getUser()
-.then(function(v) { 
-    console.log(v); 
-  })
-.catch(function(v) {
-
-});
-
-```
-
-### Clientes
-* **getData** - Recebe dados de **clientes**
-```javascript
-var item = 'clientes'; //ex.
-var id_item = 999;
-netoffice.getData(item,id_item) 
-.then(function(v) {
-      console.log(v);    
-}) 
-.catch(function(v) {
-
-});
-```
-
-
 * **NetOfficeRequest** - Método para chamadas HTTP
 ```javascript
 data = {
@@ -94,6 +65,9 @@ data = {
 
 });
 ```
+
+
+
 
 
 ### Tickets
@@ -157,6 +131,35 @@ netoffice.getSecaoData(no_builder_secao_id)
 });
 ```
 
+### Usuários
+* **getUser** - Recebe dados do usuário logado
+
+```javascript
+netoffice.getUser()
+.then(function(v) { 
+    console.log(v); 
+  })
+.catch(function(v) {
+
+});
+
+```
+
+### Clientes
+* **getData** - Recebe dados de **clientes**
+```javascript
+var item = 'clientes'; //ex.
+var id_item = 999;
+netoffice.getData(item,id_item) 
+.then(function(v) {
+      console.log(v);    
+}) 
+.catch(function(v) {
+
+});
+```
+
+
 
 ## Interface
 
@@ -185,6 +188,11 @@ netoffice.MenuToggle()
 });
 ```
 
+
+* **AjaxModal** - Janela modal com conteúdo ajax
+```javascript
+AjaxModal('<url>',{});
+```
 
 
 
