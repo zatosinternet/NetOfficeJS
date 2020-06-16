@@ -4,6 +4,11 @@
 
 ### `netoffice = new NetOffice();`
 
+Instâncias que suportam o NetOfficeJS, por padrão declaram as seguintes variáveis para identificar a "seção pai":
+Ex:
+var netofficejsItem = "os";
+var netofficejsItemID = 999;  
+
 
 * **NetOfficeRequest** - Método para chamadas HTTP
 ```javascript
@@ -153,6 +158,7 @@ netoffice.findTicket(data)
 
 ### Builder
 
+
 * **getSecao** - Recebe estrutura de uma seção do **NetOffice Builder**
 ```javascript
 var no_builder_secao_id = 0; //Opcional, esta variável já é definida na view da seção
@@ -191,6 +197,15 @@ netoffice.getSecaoItemData(no_builder_secao_id,item_id)
 
 });
 ```
+
+Em todas as instâncias no Builder são decladas as variváveis padrões:
+
+var netofficejsItem = "builder-9";
+var netofficejsItemID = 999;  
+
+Váriaveis declaradas na View do Item: 
+var builderId = 9;
+var builderItemId = 999;
 
 
 
