@@ -168,7 +168,9 @@ netoffice.getSecao(no_builder_secao_id)
 * **getSecaoData** - Recebe dados de seção do **NetOffice Builder**
 ```javascript
 var no_builder_secao_id = 0; //Opcional, esta variável já é definida na view da seção
-netoffice.getSecaoData(no_builder_secao_id) 
+var secao_pai = 0; //Opcional, label da seção pai
+var secao_pai_id = 0; //Opcional, ID da seção pai
+netoffice.getSecaoData(no_builder_secao_id,secao_pai,secao_pai_id) 
 .then(function(v) {
       console.log(v);    
 }) 
@@ -176,6 +178,21 @@ netoffice.getSecaoData(no_builder_secao_id)
 
 });
 ```
+
+* **getSecaoItemData** - Recebe dados de seção do **NetOffice Builder**
+```javascript
+var no_builder_secao_id = 0; //ID do APP ou Seção
+var item_id = 0; ///ID do item
+netoffice.getSecaoData(no_builder_secao_id,item_id) 
+.then(function(v) {
+      console.log(v);    
+}) 
+.catch(function(v) {
+
+});
+```
+
+
 
 #### Builder UI
 
