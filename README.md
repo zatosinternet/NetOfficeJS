@@ -213,8 +213,11 @@ var builderItemId = 999;
 
 * **getSecaoHTML** - Recebe estrutura HTML do **NetOffice Builder**
 ```javascript
-var no_builder_secao_id = 0; 
-netoffice.getSecaoHTML(no_builder_secao_id) 
+var no_builder_secao_id = 0;
+var secao_pai = ""; //ex,: "projeto","builder-ID"
+var secao_pai_id = 0; 
+var view_only = false; //não são construídos os botões de "editar"
+netoffice.getSecaoHTML(no_builder_secao_id,secao_pai,secao_pai_id,view_only) 
 .then(function(v) {
       //Retorno HTML - v.html   
 }) 
@@ -226,7 +229,9 @@ netoffice.getSecaoHTML(no_builder_secao_id)
 * **getSecaoAnexos** - Recebe estrutura HTML de anexos
 ```javascript
 var no_builder_secao_id = 0; 
-netoffice.getSecaoHTML(no_builder_secao_id) 
+var secao_pai = ""; //ex,: "projeto","builder-ID"
+var secao_pai_id = 0;
+netoffice.getSecaoAnexos(no_builder_secao_id,secao_pai,secao_pai_id) 
 .then(function(v) {
       //Retorno HTML - v.html   
 }) 
