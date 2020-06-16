@@ -183,7 +183,7 @@ netoffice.getSecaoData(no_builder_secao_id,secao_pai,secao_pai_id)
 ```javascript
 var no_builder_secao_id = 0; //ID do APP ou Seção
 var item_id = 0; ///ID do item
-netoffice.getSecaoData(no_builder_secao_id,item_id) 
+netoffice.getSecaoItemData(no_builder_secao_id,item_id) 
 .then(function(v) {
       console.log(v);    
 }) 
