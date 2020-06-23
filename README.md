@@ -155,6 +155,23 @@ netoffice.findTicket(data)
 });
 ```
 
+* **setGroupTicket** - Altera o Projeto/Equipe de um ticket
+```javascript
+data = {
+	ticket_id: 0,
+	group_id: 0
+};
+netoffice.setGroupTicket(data) 
+.then(function(v) {
+      console.log(v);    
+}) 
+.catch(function(v) {
+
+});
+```
+
+	
+
 
 ### Builder
 
