@@ -6,9 +6,10 @@
 
 Instâncias que suportam o NetOfficeJS, por padrão declaram as seguintes variáveis para identificar a "seção pai":
 Ex:
+```
 var netofficejsItem = "os";
 var netofficejsItemID = 999;  
-
+```
 
 * **NetOfficeRequest** - Método para chamadas HTTP
 ```javascript
@@ -168,6 +169,27 @@ netoffice.setGroupTicket(data)
 .catch(function(v) {
 
 });
+```
+
+* **setDescricaoTicket** - Altera a descrição de um ticket
+```javascript
+data = {
+	ticket_id: 0,
+	descricao: 0
+};
+netoffice.setDescricaoTicket(data) 
+.then(function(v) {
+      console.log(v);    
+}) 
+.catch(function(v) {
+
+});
+```
+
+```
+//Na interface de visualizaçào de tickets o objeto com a estrutura do ticket fica disponível na variável:
+NetofficeJSTicketData = {id: "16876", id_cliente: "1419", email: "", data: "2020-06-23 23:50:41", …}
+
 ```
 
 	
