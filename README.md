@@ -237,7 +237,8 @@ netoffice.getSecaoItemData(no_builder_secao_id,item_id)
 });
 ```
 
-Em todas as instâncias no Builder são decladas as variváveis padrões:
+```javascript
+//Em todas as instâncias no Builder são decladas as variváveis padrões:
 
 var netofficejsItem = "builder-9";
 var netofficejsItemID = 999;  
@@ -246,6 +247,19 @@ Váriaveis declaradas na View do Item:
 var builderId = 9;
 var builderItemId = 999;
 
+```
+
+#### Builder Eventos
+
+```javascript
+
+elem.addEventListener('NOBuilderAddItem', function (e) { ... }, false);
+
+elem.addEventListener('NOBuilderEditItem', function (e) { ... }, false);
+
+elem.addEventListener('NOBuilderRemoveItem', function (e) { ... }, false);
+
+```
 
 
 #### Builder UI
