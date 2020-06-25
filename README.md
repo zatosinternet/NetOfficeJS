@@ -186,8 +186,9 @@ netoffice.setDescricaoTicket(data)
 });
 ```
 
-```
+```javascript
 //Na interface de visualizaçào de tickets o objeto com a estrutura do ticket fica disponível na variável:
+
 NetofficeJSTicketData = {id: "16876", id_cliente: "1419", email: "", data: "2020-06-23 23:50:41", …}
 
 ```
@@ -243,7 +244,7 @@ netoffice.getSecaoItemData(no_builder_secao_id,item_id)
 var netofficejsItem = "builder-9";
 var netofficejsItemID = 999;  
 
-Váriaveis declaradas na View do Item: 
+//Váriaveis declaradas na View do Item: 
 var builderId = 9;
 var builderItemId = 999;
 
@@ -253,11 +254,11 @@ var builderItemId = 999;
 
 ```javascript
 
-elem.addEventListener('NOBuilderAddItem', function (e) { ... }, false);
+document.addEventListener('NOBuilderAddItem', function (e) { ... }, false);
 
-elem.addEventListener('NOBuilderEditItem', function (e) { ... }, false);
+document.addEventListener('NOBuilderEditItem', function (e) { ... }, false);
 
-elem.addEventListener('NOBuilderRemoveItem', function (e) { ... }, false);
+document.addEventListener('NOBuilderRemoveItem', function (e) { ... }, false);
 
 ```
 
