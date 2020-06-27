@@ -186,6 +186,31 @@ netoffice.setDescricaoTicket(data)
 });
 ```
 
+
+* **setSeqTicket** - Atualiza a sequencia de responsáveis do ticket
+```javascript
+var sequencia = JSON.stringify([{
+		operador: "login2",
+		data:"2020-10-10 10:00:00", //opcional
+		obs: "Foo" //opcional
+		},{
+		operador: "login2",
+		data:"2020-10-10 10:00:00", //opcional
+		obs: "Foo" //opcional
+		}]);
+
+var data = {
+	sequencia: sequencia
+	};
+netoffice.setSeqTicket(ticket_id,data) 
+.then(function(v) {
+      console.log(v);    
+}) 
+.catch(function(v) {
+
+});
+```
+
 ```javascript
 //Na interface de visualizaçào de tickets o objeto com a estrutura do ticket fica disponível na variável:
 
