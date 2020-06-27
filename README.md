@@ -279,11 +279,11 @@ var builderItemId = 999;
 
 ```javascript
 
-document.addEventListener('NOBuilderAddItem', function (e) { ... }, false);
+document.addEventListener('NOBuilderAddItem', function (e) { console.log(e.detail) });
 
-document.addEventListener('NOBuilderEditItem', function (e) { ... }, false);
+document.addEventListener('NOBuilderEditItem', function (e) { console.log(e.detail) });
 
-document.addEventListener('NOBuilderRemoveItem', function (e) { ... }, false);
+document.addEventListener('NOBuilderRemoveItem', function (e) { console.log(e.detail) });
 
 ```
 
