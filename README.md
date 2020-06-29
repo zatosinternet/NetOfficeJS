@@ -376,7 +376,7 @@ netoffice.NetOfficeRequest(data)
 
 * **reloadTicket** - Atualiza ModalView do ticket que está sendo exibido
 ```javascript
-netoffice.reloadTicket() 
+netoffice.reloadTicket(NetofficeJSTicketData.id) 
 .then(function(v) {
       console.log(v);    
 }) 
