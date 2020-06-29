@@ -11,64 +11,6 @@ var netofficejsItem = "os";
 var netofficejsItemID = 999;  
 ```
 
-* **NetOfficeRequest** - Método para chamadas HTTP
-```javascript
-data = {
-	method: "POST", //or "GET"
-	type: "JSON", //default
-	url: "http://site.com/?foo=bar",
-	headers: {
-	    "token":"324235",
-	    "user":"email@email"
-	    },
-	body: {"idteste":"2345"}
-    }
-netoffice.NetOfficeRequest(data) 
-.then(function(v) {
-      console.log(v);    
-}) 
-.catch(function(v) {
-
-});
-```
-
-### Campos adicionais
-* **CAgetData** - Recebe valor de um capo adicional
-```javascript
-data = {
-	item: "os", //Ex.: os
-	item_id: 0, // ID do item 
-	ca_id: 0, // ID do campo adicional
-	secao: "", // Se for relacionado a seções ('builder','projeto','...')
-	secao_id: 0
-	}
- netoffice.CAgetData(data) 
-.then(function(v) {
-    console.log(v);    
-}) 
-.catch(function(v) {
-
-});
-```
-
-* **CAsaveData** - Insere dados de um campo adicional
-```javascript
-data = {
-	item: "os", //Ex.: os
-	item_id: 0, // ID do item 
-	ca_id: 0, // ID do campo adicional
-	secao: "", // Se for relacionado a seções ('builder','projeto','...')
-	secao_id: 0,
-	valor: "FOO"
-	}
- netoffice.CAsaveData(data) 
-.then(function(v) {
-    console.log(v);    
-}) 
-.catch(function(v) {
-
-});
-```
 
 
 
@@ -148,6 +90,21 @@ data = {
 	canal_abertura_id: ""
 };
 netoffice.findTicket(data) 
+.then(function(v) {
+      console.log(v);    
+}) 
+.catch(function(v) {
+
+});
+```
+
+* **setTemplateTicket** - Altera o Template de um ticket
+```javascript
+data = {
+	ticket_id: 0,
+	template_id: 0
+};
+netoffice.setTemplateTicket(data) 
 .then(function(v) {
       console.log(v);    
 }) 
@@ -250,7 +207,7 @@ netoffice.getSecaoData(no_builder_secao_id,secao_pai,secao_pai_id)
 });
 ```
 
-* **getSecaoItemData** - Recebe dados de seção do **NetOffice Builder**
+* **getSecaoItemData** - Recebe dados um único item de seção do **NetOffice Builder**
 ```javascript
 var no_builder_secao_id = 0; //ID do APP ou Seção
 var item_id = 0; ///ID do item
@@ -319,6 +276,48 @@ netoffice.getSecaoAnexos(no_builder_secao_id,secao_pai,secao_pai_id)
 });
 ```
 
+
+
+
+### Campos adicionais
+* **CAgetData** - Recebe valor de um capo adicional
+```javascript
+data = {
+	item: "os", //Ex.: os
+	item_id: 0, // ID do item 
+	ca_id: 0, // ID do campo adicional
+	secao: "", // Se for relacionado a seções ('builder','projeto','...')
+	secao_id: 0
+	}
+ netoffice.CAgetData(data) 
+.then(function(v) {
+    console.log(v);    
+}) 
+.catch(function(v) {
+
+});
+```
+
+* **CAsaveData** - Insere dados de um campo adicional
+```javascript
+data = {
+	item: "os", //Ex.: os
+	item_id: 0, // ID do item 
+	ca_id: 0, // ID do campo adicional
+	secao: "", // Se for relacionado a seções ('builder','projeto','...')
+	secao_id: 0,
+	valor: "FOO"
+	}
+ netoffice.CAsaveData(data) 
+.then(function(v) {
+    console.log(v);    
+}) 
+.catch(function(v) {
+
+});
+```
+
+
 ### Usuários
 * **getUser** - Recebe dados do usuário logado
 
@@ -347,6 +346,29 @@ netoffice.getData(item,id_item)
 });
 ```
 
+
+### Tools
+
+* **NetOfficeRequest** - Método para chamadas HTTP
+```javascript
+data = {
+	method: "POST", //or "GET"
+	type: "JSON", //default
+	url: "http://site.com/?foo=bar",
+	headers: {
+	    "token":"324235",
+	    "user":"email@email"
+	    },
+	body: {"idteste":"2345"}
+    }
+netoffice.NetOfficeRequest(data) 
+.then(function(v) {
+      console.log(v);    
+}) 
+.catch(function(v) {
+
+});
+```
 
 
 ## Interface
