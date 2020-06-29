@@ -384,8 +384,10 @@ netoffice.reloadTicket()
 
 });
 ```
-
-
+Ou
+```javascript
+netoffice.emit("NOreloadTicket",{ticket_id:999});
+```
 
 * **MenuToggle** - Recolhe o menu lateral
 ```javascript
@@ -397,7 +399,10 @@ netoffice.MenuToggle()
 
 });
 ```
-
+Ou
+```javascript
+netoffice.emit("NOtoggleMenu",{});
+```
 
 * **AjaxModal** - Janela modal com conteúdo ajax
 ```javascript
