@@ -144,6 +144,23 @@ netoffice.setDescricaoTicket(data)
 ```
 
 
+* **setEsforcoTicket** - Atualiza a sequencia de responsáveis do ticket
+```javascript
+data = {
+	ticket_id: "999",
+	horas: "01"
+	minutos: "00"
+};
+netoffice.setEsforcoTicket(data) 
+.then(function(v) {
+      console.log(v);    
+}) 
+.catch(function(v) {
+
+});
+```
+
+
 * **setSeqTicket** - Atualiza a sequencia de responsáveis do ticket
 ```javascript
 var sequencia = JSON.stringify([{
