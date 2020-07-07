@@ -347,6 +347,30 @@ netoffice.getData(item,id_item)
 ```
 
 
+### Grupos de trabalho (projetos/equipes)
+* **getGroups** - Recebe dados de **projetos/equipes**
+```javascript
+data = {
+	item_id: "",
+	status: "",
+	cliente_id: ""
+};
+
+	async getGroups(data) {
+		try {
+		const res = await this.postDataAjax("/modulos/classes/js/local.php?act=groups",data)
+			//console.log(res)
+			return res;
+		} catch(err) {
+			console.log(err);
+		}
+	}
+```
+
+
+
+
+
 ### Tools
 
 * **NetOfficeRequest** - Método para chamadas HTTP
