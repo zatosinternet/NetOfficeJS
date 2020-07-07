@@ -324,7 +324,8 @@ data = {
 	item: "os", //Ex.: os
 	item_id: 0, // ID do item 
 	secao: "", // Se for relacionado a seções (opcional)
-	secao_id: 0 (opcional)
+	secao_id: 0 (opcional),
+	nl: true //Linguagem Natural
 	}
  netoffice.CAfindDataByTitle(data) 
 .then(function(v) {
