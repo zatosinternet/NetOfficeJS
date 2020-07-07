@@ -356,15 +356,13 @@ data = {
 	cliente_id: ""
 };
 
-	async getGroups(data) {
-		try {
-		const res = await this.postDataAjax("/modulos/classes/js/local.php?act=groups",data)
-			//console.log(res)
-			return res;
-		} catch(err) {
-			console.log(err);
-		}
-	}
+netoffice.getGroups(data) 
+.then(function(v) {
+      console.log(v);    
+}) 
+.catch(function(v) {
+
+});
 ```
 
 
