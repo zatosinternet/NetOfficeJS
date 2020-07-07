@@ -320,7 +320,7 @@ data = {
 * **CAfindDataByTitle** - Recebe valor de um capo adicional
 ```javascript
 data = {
-	title: "foo", (Imporatnte: esta busca utiliza Linguagem Natural para identificar os campos, no cadastro do campo adicionais otiluze os sinônimos)
+	q: "foo", (Imporatnte: esta busca utiliza Linguagem Natural para identificar os campos, no cadastro do campo adicionais otiluze os sinônimos)
 	item: "os", //Ex.: os
 	item_id: 0, // ID do item 
 	secao: "", // Se for relacionado a seções (opcional)
