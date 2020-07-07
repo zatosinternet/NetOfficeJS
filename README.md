@@ -317,6 +317,24 @@ data = {
 });
 ```
 
+* **CAfindDataByTitle** - Recebe valor de um capo adicional
+```javascript
+data = {
+	title: "foo",
+	item: "os", //Ex.: os
+	item_id: 0, // ID do item 
+	secao: "", // Se for relacionado a seções (opcional)
+	secao_id: 0 (opcional)
+	}
+ netoffice.CAfindDataByTitle(data) 
+.then(function(v) {
+    console.log(v);    
+}) 
+.catch(function(v) {
+
+});
+```
+
 
 ### Usuários
 * **getUser** - Recebe dados do usuário logado
