@@ -185,6 +185,52 @@ netoffice.setSeqTicket(ticket_id,data)
 });
 ```
 
+
+* **addLembreteTicket** - Cria um lembrete par ao ticket
+```javascript
+data = {
+	ticket_id: "999",
+	data_lembrete: "", //AAAA-MM-DD HH:MM:SS
+	usuario: "login", //opcional
+	descricao: "Foo", //opcional
+	tipo: "notifica_user", //opcional (notifica_user(padrão) ou interacao)
+};
+netoffice.addLembreteTicket(data) 
+.then(function(v) {
+      console.log(v);    
+}) 
+.catch(function(v) {
+
+});
+```
+
+
+* **getLembreteTicket** - Lista lembretes criados para o ticket
+```javascript
+
+netoffice.getLembreteTicket(ticket_id) 
+.then(function(v) {
+      console.log(v);    
+}) 
+.catch(function(v) {
+
+});
+```
+
+
+
+* **delLembreteTicket** - Remove lembrete criado para o ticket
+```javascript
+
+netoffice.delLembreteTicket(ID_LEMBRETE) 
+.then(function(v) {
+      console.log(v);    
+}) 
+.catch(function(v) {
+
+});
+```
+
 ```javascript
 //Na interface de visualizaçào de tickets o objeto com a estrutura do ticket fica disponível na variável:
 
