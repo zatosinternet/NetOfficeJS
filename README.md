@@ -414,6 +414,32 @@ netoffice.getUser()
 
 ```
 
+* **getUserbyId** - Recebe dados do usuário através do ID
+
+```javascript
+netoffice.getUserbyId(id)
+.then(function(v) { 
+    console.log(v); 
+  })
+.catch(function(v) {
+
+});
+
+```
+* **getUserbyLogin** - Recebe dados do usuário através do Login
+
+```javascript
+netoffice.getUserbyLogin(login)
+.then(function(v) { 
+    console.log(v); 
+  })
+.catch(function(v) {
+
+});
+
+```
+
+
 ### Clientes
 * **getData** - Recebe dados de **clientes**
 ```javascript
@@ -433,9 +459,10 @@ netoffice.getData(item,id_item)
 * **getGroups** - Recebe dados de **projetos/equipes**
 ```javascript
 data = {
-	item_id: "",
-	status: "",
-	cliente_id: ""
+	item_id: "", //obrigatório
+	status: "", //filtro
+	titulo: "", //filtro
+	cliente_id: "" //filtro
 };
 
 netoffice.getGroups(data) 
@@ -447,8 +474,17 @@ netoffice.getGroups(data)
 });
 ```
 
+* **isParticipantGroup** - Valida se um usuário é participante do grupo **projetos/equipes**
+```javascript
 
+netoffice.getGroups(group_id,participant_id) 
+.then(function(v) {
+      console.log(v);    
+}) 
+.catch(function(v) {
 
+});
+```
 
 
 ### Tools
