@@ -477,7 +477,7 @@ netoffice.getGroups(data)
 * **isParticipantGroup** - Valida se um usuário é participante do grupo **projetos/equipes**
 ```javascript
 
-netoffice.getGroups(group_id,participant_id) 
+netoffice.isParticipantGroup(group_id,participant_id) 
 .then(function(v) {
       console.log(v);    
 }) 
