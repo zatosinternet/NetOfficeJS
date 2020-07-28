@@ -186,6 +186,22 @@ netoffice.setSeqTicket(ticket_id,data)
 ```
 
 
+* **setOperadorOriginalTicket** - Altera o Responsável original de um ticket
+```javascript
+data = {
+	ticket_id: "9999", //ID do ticket
+	operador: "usuario@empresa.com.br", // login do novo responsável
+	}
+netoffice.setOperadorOriginalTicket(data) 
+.then(function(v) {
+      console.log(v);    
+}) 
+.catch(function(v) {
+
+});
+```
+
+
 * **addLembreteTicket** - Cria um lembrete par ao ticket
 ```javascript
 data = {
