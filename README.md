@@ -264,6 +264,24 @@ netoffice.delLembreteTicket(ID_LEMBRETE)
 });
 ```
 
+
+
+* **addAprovador** - Cria um lembrete par ao ticket
+```javascript
+data = {
+	ticket_id: "999",
+	aprovador: "login"
+};
+netoffice.addAprovador(data) 
+.then(function(v) {
+      console.log(v);    
+}) 
+.catch(function(v) {
+
+});
+```
+
+
 ```javascript
 //Na interface de visualizaçào de tickets o objeto com a estrutura do ticket fica disponível na variável:
 
