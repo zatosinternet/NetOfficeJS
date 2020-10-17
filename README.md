@@ -14,8 +14,29 @@ var netofficejsItemID = 999;
 
 
 
+### API Rest NetOffice
+
+```javascript
+
+data = {
+	method: "POST", //or "GET"
+	endpoint: "AddTicket", //"GetTickets?protocolo=1234",
+	body: {"idteste":"2345"}, //somente para POST
+	v: 1 //versao da API
+}
+
+netoffice.API(data) 
+.then(function(v) {
+      console.log(v);    
+}) 
+.catch(function(v) {
+
+});
+```
 
 
+
+## End-points JS
 ### Tickets
 
 
