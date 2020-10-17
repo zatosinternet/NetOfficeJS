@@ -3,7 +3,7 @@
 ***Exemplo de Request***	
 ```javascript	
 const body = {campo1: 'teste', campo2: 'teste2'};
-const TokenVTEX = fetch('https://api.exemplo.com/endpoint', {
+const Request = fetch('https://api.exemplo.com/endpoint', {
 	method: 'POST',
 	body: JSON.stringify(body),
 	headers: {'Content-Type': 'application/json','Autorization': 'Bearer 2ihji23hrf23r'}
@@ -13,6 +13,8 @@ const TokenVTEX = fetch('https://api.exemplo.com/endpoint', {
 .then(function(response){
 	return response;
 });
+
+return Request;
 ```
 
 
@@ -29,6 +31,8 @@ var Query =  pool.getConnection()
 }).catch(err => {
 	console.log(err); // any of connection time or query time errors from above<br>
 });
+
+return Query;
 ```
 
 ##Variaveis do sistema
