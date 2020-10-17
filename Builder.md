@@ -3,7 +3,7 @@
 ***Exemplo de Request***	
 ```javascript	
 const body = {campo1: 'teste', campo2: 'teste2'};
-const Request = fetch('https://api.exemplo.com/endpoint', {
+const Request = fetch('https://api.netoffice.com.br/GetTickets', {
 	method: 'POST',
 	body: JSON.stringify(body),
 	headers: {'Content-Type': 'application/json','Autorization': 'Bearer 2ihji23hrf23r'}
