@@ -15,6 +15,7 @@ var netofficejsItemID = 999;
 
 
 ### API Rest NetOffice
+Documentação V1: https://dev.zatos.io/docs/netoffice/api/v1/
 
 ```javascript
 
