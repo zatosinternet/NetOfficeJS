@@ -1,6 +1,19 @@
-#NetOffice Node Function
+##NetOffice Node Function
 
 ***Exemplo de Request***	
+```javascript	
+	const body = {campo1: 'teste', campo2: 'teste2'};
+	const TokenVTEX = fetch('https://api.exemplo.com/endpoint', {
+		method: 'POST',
+		body: JSON.stringify(body),
+		headers: {'Content-Type': 'application/json','Autorization': 'Bearer 2ihji23hrf23r'}
+	}).then(function(response){
+      return response.json();
+ })
+ .then(function(response){
+  return response;
+  });
+```
 
 
 ***Acesso ao banco de dados***
