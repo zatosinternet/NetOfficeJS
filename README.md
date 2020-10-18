@@ -1,4 +1,4 @@
-# NetOfficeJS API
+# NetOfficeJS Internal API
 
 ## API
 
