@@ -21,22 +21,21 @@ return Request;
 ***Acesso ao banco de dados***
 ```javascript	
 
-async function getData() {
-	const pool = NetOfficeDB.createPool(NETOFFICE_DB_CONECTION_POOL);
-	var Query =  pool.getConnection()
-	.then(conn => {
-		const res = conn.query("select * FROM clientes_view WHERE id = 123 ");
-		conn.release();
-		return res;
-	}).then(result => {
-		return result[0];
-	}).catch(err => {
-		console.log(err); // any of connection time or query time errors from above<br>
-	});
-}
-return getData();
 
+ const pool = NetOfficeDB.createPool(NETOFFICE_DB_CONECTION_POOL);
+ var Query =  pool.getConnection()
+    .then(conn => {
+      const res = conn.query("select * FROM clientes_view WHERE id = 123 ");
+      conn.release();
+      return res;
+    }).then(result => {
+       return result[0];
+    }).catch(err => {
+      console.log(err); // any of connection time or query time errors from above
+    });
+  
 return Query;
+	
 ```
 
 ## Variaveis do sistema
