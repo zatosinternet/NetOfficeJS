@@ -1,7 +1,22 @@
 ## NetOffice Node Function
 
+
+
+***Exemplo de API NetOffice***	
+```javascript	
+
+	const GetTickets = netoffice.API({method:"GET",endpoint:"GetTickets/?id=22816",body:{}})
+	  .then(function(response){
+	  return response;
+	});
+
+return GetTickets;
+```
+
+
 ***Exemplo de Request***	
 ```javascript	
+const fetch = require("node-fetch");
 const body = {campo1: 'teste', campo2: 'teste2'};
 const Request = fetch('https://api.netoffice.com.br/GetTickets', {
 	method: 'POST',
