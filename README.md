@@ -567,6 +567,7 @@ netoffice.isParticipantGroup(group_id,participant_id)
 data = {
 	method: "POST", //or "GET"
 	type: "JSON", //default
+	post_data: "FORM" // or "JSON"
 	url: "http://site.com/?foo=bar",
 	headers: {
 	    "token":"324235",
