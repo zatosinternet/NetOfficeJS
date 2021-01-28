@@ -26,7 +26,8 @@ async function getData() {
 	var Query =  pool.getConnection()
 	.then(conn => {
 		const res = conn.query("select * FROM clientes_view WHERE id = 123 ");
-		conn.release();
+		//conn.release();
+		conn.destroy();
 		return res;
 	}).then(result => {
 		return result[0];
