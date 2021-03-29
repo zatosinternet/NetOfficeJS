@@ -368,6 +368,29 @@ var builderItemId = 999;
 
 ```
 
+* **Builder - NetOffice Node Function**
+```javascript
+data = {
+	nnf_id: "2ru238y2394823237r239",
+	method: "POST", //or "GET"
+	type: "JSON", //default
+	headers: {
+		"user":"email@email"
+		},
+	body: {"idteste":"2345"}
+}
+netoffice.NNF(data) 
+.then(function(v) {
+      console.log(v);    
+}) 
+.catch(function(v) {
+
+});
+```
+
+
+
+
 #### Builder Eventos
 
 ```javascript
