@@ -20,7 +20,7 @@ Documentação V1: https://dev.zatos.io/docs/netoffice/api/v1/
 ```javascript
 
 data = {
-	method: "POST", //or "GET"
+	method: "POST", */ ou "GET" */
 	endpoint: "AddTicket", //"GetTickets?protocolo=1234",
 	body: {"idteste":"2345"}, //somente para POST
 	v: 1 //versao da API
