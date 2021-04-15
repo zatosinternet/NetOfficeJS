@@ -1,3 +1,12 @@
+class NetOffice {
+  constructor(a,b) {
+    this.item = a;
+    this.id_item = b;
+  };
+
+    
+}
+
 function NObindEvent(element, eventName, eventHandler) {
     if (element.addEventListener) {
         element.addEventListener(eventName, eventHandler, false);
