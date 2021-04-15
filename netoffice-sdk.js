@@ -7,6 +7,8 @@ class NetOffice {
     
 }
 
+netoffice = new NetOffice();
+
 function NObindEvent(element, eventName, eventHandler) {
     if (element.addEventListener) {
         element.addEventListener(eventName, eventHandler, false);
