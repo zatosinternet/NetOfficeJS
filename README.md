@@ -37,54 +37,10 @@ netoffice.API(data)
 
 
 
-## End-points JS
-### Tickets
+## End-points JS exclusivos
+# Tickets
 
-
-* **addTicket** - Cria um ticket
-```javascript
-data = {
-	usuario: "", //Usuário NetOffice
-	operador: "backlog",
-	assunto: "",
-	descricao: "",
-	ref_abertura: "",
-	tags: "Tag 1, Tag 2",
-	emails_os: "",
-	categoria: "0",//ID Categoria
-	relacao_id: "",//ID Grupo de Trabalho
-	seguidores: "user1@empresa.com.br,user2@empresa.com.br",
-	data_desejada: "",//AAAA-MM-DD HH:ii:ss
-	cliente_id: "",//ID do cliente
-	template: "", //ID do template
-	seq_responsaveis: "user1@empresa.com.br,user2@empresa.com.br",
-	checklist: "Task 1,Task 2",
-	campos_adicionais: {},
-	canal_abertura: "",
-	canal_abertura_id: "",
-	esforco: "01" //Quantidade de horas
-	
-}
-netoffice.addTicket(data) 
-.then(function(v) {
-      console.log(v);    
-}) 
-.catch(function(v) {
-
-});
-```
-
-
-* **getTicket** - Recebe dados de um ticket
-```javascript
-netoffice.getTicket(<ID_TICKET>) 
-.then(function(v) {
-      console.log(v);    
-}) 
-.catch(function(v) {
-
-});
-```
+Mais em Documentação V1: https://dev.zatos.io/docs/netoffice/api/v1/
 
 
 * **transferTicket** - Transfere a responsabilidade de um ticket
@@ -314,7 +270,7 @@ NetofficeJSTicketData = {id: "16876", id_cliente: "1419", email: "", data: "2020
 	
 
 
-### Builder
+# Builder
 
 
 * **getSecao** - Recebe estrutura de uma seção do **NetOffice Builder**
@@ -391,7 +347,7 @@ netoffice.NNF(data)
 
 
 
-#### Builder Eventos
+## Builder Events
 
 ```javascript
 
@@ -404,15 +360,15 @@ document.addEventListener('NOBuilderRemoveItem', function (e) { console.log(e.de
 ```
 
 
-#### Builder UI
+## Builder UI
 
-* **getSecaoHTML** - Recebe estrutura HTML do **NetOffice Builder**
+* **BuilderView** - Recebe estrutura HTML do **NetOffice Builder**
 ```javascript
 var no_builder_secao_id = 0;
 var secao_pai = ""; //ex,: "projeto","builder-ID"
 var secao_pai_id = 0; 
 var view_only = false; //não são construídos os botões de "editar"
-netoffice.getSecaoHTML(no_builder_secao_id,secao_pai,secao_pai_id,view_only) 
+netoffice.BuilderView(no_builder_secao_id,secao_pai,secao_pai_id,view_only) 
 .then(function(v) {
       //Retorno HTML - v.html   
 }) 
@@ -420,6 +376,37 @@ netoffice.getSecaoHTML(no_builder_secao_id,secao_pai,secao_pai_id,view_only)
 
 });
 ```
+
+* **BuilderGetForm** - Recebe estrutura HTML do **NetOffice Builder**
+```javascript
+var no_builder_secao_id = 0;
+var secao_pai = ""; //ex,: "projeto","builder-ID"
+var secao_pai_id = 0; 
+var edit = false;
+netoffice.BuilderGetForm(no_builder_secao_id,secao_pai,secao_pai_id,edit) 
+.then(function(v) {
+      //Retorno HTML - v.html   
+}) 
+.catch(function(v) {
+
+});
+```
+
+* **BuilderGetAddButton** - Recebe estrutura HTML do **NetOffice Builder**
+```javascript
+var no_builder_secao_id = 0;
+var secao_pai = ""; //ex,: "projeto","builder-ID"
+var secao_pai_id = 0; 
+netoffice.BuilderGetAddButton(no_builder_secao_id,secao_pai,secao_pai_id) 
+.then(function(v) {
+      //Retorno HTML - v.html   
+}) 
+.catch(function(v) {
+
+});
+```
+
+
 
 * **getSecaoAnexos** - Recebe estrutura HTML de anexos
 ```javascript
