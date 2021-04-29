@@ -273,18 +273,6 @@ NetofficeJSTicketData = {id: "16876", id_cliente: "1419", email: "", data: "2020
 # Builder
 
 
-* **getSecao** - Recebe estrutura de uma seção do **NetOffice Builder**
-```javascript
-var no_builder_secao_id = 0; //Opcional, esta variável já é definida na view da seção
-netoffice.getSecao(no_builder_secao_id) 
-.then(function(v) {
-      console.log(v);    
-}) 
-.catch(function(v) {
-
-});
-```
-
 * **BuilderGetData** - Recebe dados de seção do **NetOffice Builder**
 ```javascript
 var no_builder_id = 0; //Opcional, esta variável já é definida na view da seção
