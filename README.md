@@ -4,13 +4,6 @@
 
 ### `netoffice = new NetOffice();`
 
-Instâncias que suportam o NetOfficeJS, por padrão declaram as seguintes variáveis para identificar a "seção pai":
-Ex:
-```
-var netofficejsItem = "os";
-var netofficejsItemID = 999;  
-```
-
 
 
 
@@ -41,7 +34,12 @@ netoffice.API(data)
 # Tickets
 
 Mais em Documentação V1: https://dev.zatos.io/docs/netoffice/api/v1/
-
+Instâncias que suportam o NetOfficeJS, por padrão declaram as seguintes variáveis para identificar a "seção pai":
+Ex:
+```
+var netofficejsItem = "os";
+var netofficejsItemID = 999;  
+```
 
 * **transferTicket** - Transfere a responsabilidade de um ticket
 ```javascript
