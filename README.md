@@ -37,7 +37,7 @@ netoffice.API(data)
 
 
 
-## End-points JS exclusivos
+## Internal API End-points
 # Tickets
 
 Mais em Documentação V1: https://dev.zatos.io/docs/netoffice/api/v1/
