@@ -584,7 +584,19 @@ netoffice.NetOfficeRequest(data)
 ## Interface
 
 
-* **reloadTicket** - Atualiza ModalView do ticket que está sendo exibido
+* **listTickets** - Exibe lista de tickets
+```javascript
+netoffice.listTickets(params) 
+.then(function(v) {
+      console.log(v);    
+}) 
+.catch(function(v) {
+
+});
+```
+
+
+
 ```javascript
 netoffice.reloadTicket(NetofficeJSTicketData.id) 
 .then(function(v) {
@@ -594,10 +606,7 @@ netoffice.reloadTicket(NetofficeJSTicketData.id)
 
 });
 ```
-Ou
-```javascript
-netoffice.emit("NOreloadTicket",{ticket_id:999});
-```
+
 
 * **MenuToggle** - Recolhe o menu lateral
 ```javascript
