@@ -354,7 +354,10 @@ var no_builder_secao_id = 0;
 var secao_pai = ""; //ex,: "projeto","builder-ID"
 var secao_pai_id = 0; 
 var view_only = false; //não são construídos os botões de "editar"
-netoffice.BuilderView(no_builder_secao_id,secao_pai,secao_pai_id,view_only) 
+var extra = {
+	filter: "[{\"field\":\"ca_000\", \"condition\":\"=\", \"value\":\"10\" }]"	
+	}; //Opcional
+netoffice.BuilderView(no_builder_secao_id,secao_pai,secao_pai_id,view_only,extra) 
 .then(function(v) {
       //Retorno HTML - v.html   
 }) 
