@@ -1,56 +1,52 @@
 ## NetOffice Node Function
 
 
+### Bibliotecas disponíveis
+- Axios
+- Moment
+- GraphQL
 
-***Exemplo de API NetOffice***	
+***Exemplo de Request API***	
 ```javascript	
-
-	const GetTickets = netoffice.API({method:"GET",endpoint:"GetTickets/?id=22816",body:{}})
-	  .then(function(response){
-	  return response;
+//Exemplo GET
+ const ticket = await netoffice.API({"method": "GET", "endpoint": `GetTickets?id=${ticketId}`})
+	.then((data) => {
+	if (data.length == 0) return false;
+		return data[0];
 	});
-
-return GetTickets;
-```
-
-
-***Exemplo de Request***	
-```javascript	
-const fetch = require("node-fetch");
-const body = {campo1: 'teste', campo2: 'teste2'};
-const Request = fetch('https://api.netoffice.com.br/GetTickets', {
-	method: 'POST',
-	body: JSON.stringify(body),
-	headers: {'Content-Type': 'application/json','Autorization': 'Bearer 2ihji23hrf23r'}
-}).then(function(response){
-	return response.json();
-})
-.then(function(response){
-	return response;
+	
+	
+//Exemplo POST
+let body =  {
+	ref_abertura: ``,
+	usuario: ``,
+	operador: "backlog",
+	assunto: `Assunto`,
+	descricao: "",
+	cliente_id: 06,
+	categoria: 606,
+	template: 6,
+	canal_abertura: "nnf",
+	canal_abertura_id: 68,
+	conexao_destino: "os",
+	conexao_destino_id: 68
+    };
+		    
+addticket = await netoffice.API({method: "POST", endpoint: "AddTicket", body: body})
+.then(function(addTicket) {
+    return {"id": addTicket.id_ticket, "protocol": addTicket.protocolo}
 });
-
 return Request;
 ```
 
 
 ***Acesso ao banco de dados***
+*AtençÃo - As funções de banco de dados estão disponíveis apenas para contas com serviço de réplica de leitura do banco de dados ou on premise com acesso a views.
 ```javascript	
-
-
- const pool = NetOfficeDB.createPool(NETOFFICE_DB_CONECTION_POOL);
- var Query =  pool.getConnection()
-    .then(conn => {
-      const res = conn.query("select * FROM clientes_view WHERE id = 123 ");
-      conn.release();
-      return res;
-    }).then(result => {
-       return result[0];
-    }).catch(err => {
-      console.log(err); // any of connection time or query time errors from above
-    });
-  
-return Query;
-	
+//Abre conexão com o banco (opcional)
+const conn = await connection();
+//Select
+const data = await getData(`select nome FROM view_clientes WHERE id = ${}`);
 ```
 
 ## Variaveis do sistema
