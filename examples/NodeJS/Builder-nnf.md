@@ -1,11 +1,6 @@
 ## NetOffice Node Function
 
 
-### Bibliotecas disponíveis
-- Axios
-- Moment
-- GraphQL
-
 ***Exemplo de Request API***	
 ```javascript	
 //Exemplo GET
@@ -57,6 +52,11 @@ NetOfficeTokenAPIV1 - Token da API NetOffice V1 declarado na variável <b></b><b
 https://dev.zatos.io/docs/netoffice/api/v1/
 
 ## Bibliotecas disponíveis
-https://www.npmjs.com/package/node-fetch
+- Axios
+- Moment
+- GraphQL
+
+
+https://www.npmjs.com/package/axios
 https://www.npmjs.com/package/form-data
 https://www.npmjs.com/package/body-parser
