@@ -314,12 +314,13 @@ var builderItemId = 999;
 ```javascript
 data = {
 	nnf_id: "2ru238y2394823237r239",
-	method: "POST", //or "GET"
-	type: "JSON", //default
+	method: "GET", /* GET ou POST */
+	query: "var1=123&var2=321"
+	route: "rota_nome", /* para URL de rotas, padrão: "run" */
 	headers: {
 		"user":"email@email"
 		},
-	body: {"idteste":"2345"}
+	body: {"idteste":"2345"} /* quando POST */
 }
 netoffice.NNF(data) 
 .then(function(v) {
