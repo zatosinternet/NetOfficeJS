@@ -313,9 +313,9 @@ var builderItemId = 999;
 * **Builder - NetOffice Node Function**
 ```javascript
 data = {
-	nnf_id: "2ru238y2394823237r239",
+	id: "2ru238y2394823237r239",
 	method: "GET", /* GET ou POST */
-	query: "var1=123&var2=321"
+	query: "var1=123&var2=321",
 	route: "rota_nome", /* para URL de rotas, padrão: "run" */
 	headers: {
 		"user":"email@email"
